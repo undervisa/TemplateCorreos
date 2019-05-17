@@ -8,10 +8,40 @@
 
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css?family=Courgette');
+        /* Arrow & Hover Animation */
+#more-arrows {
+  width: 75px;
+  height: 65px;
+}
+#more-arrows:hover polygon {
+  fill: #dc3545;
+  transition: all .2s ease-out;
+}
+#more-arrows:hover polygon.arrow-bottom {
+  -webkit-transform: translateY(-18px);
+          transform: translateY(-18px);
+}
+#more-arrows:hover polygon.arrow-top {
+  -webkit-transform: translateY(18px);
+          transform: translateY(18px);
+}
+
+polygon {
+  fill: #ffc107;
+  transition: all .2s ease-out;
+}
+polygon.arrow-middle {
+  opacity: 0.75;
+  fill: #ffc107;
+}
+polygon.arrow-top {
+  opacity: 0.5;
+  fill: #ffc107;
+}
         @media screen and (max-width:480px) {
 
             .dos-columnas .columna,
-            .tres-columnas . columna {
+            .tres-columnas .columna {
                 max-width: 100% !important;
 
 
@@ -22,22 +52,23 @@
             }
 
             .tres-columnas img {
-                max-width: 33% !importanr;
+                max-width: 33% !important;
 
             }
         }
 
         @media screen and (min-width:481 px) and (max-width: 640px) {
-            .tres-columnas . columna {
+            .tres-columnas .columna {
                 max-width: 33% !important;
 
 
             }
 
-            .dos-columnas . columna {
+            .dos-columnas .columna {
                 max-width: 50% !important;
 
             }
+            
         }
     </style>
 </head>
@@ -49,7 +80,6 @@
         <tr>
             <td align="center" style="padding-top: 17px; padding-bottom: 30px; padding-left: 0px; padding-right: 0;">
                 <img src="Imagenes/1x/LogoUndervisaAmarillo.png" alt="Undervisa - Bienvenido al 5%" width="222px" style="width: 218px; height: auto; display: block;">
-
             </td>
         </tr>
 <!--Fin Header-->
@@ -57,72 +87,33 @@
 <!--Contenido Destacado-->
 <!--Saludo-->
         <tr>
-            <td heigth=105px width="100%" style="font-family:'Courgette', cursive;sans-serif; font-style: oblique; color: #FFFFFF; text-align: center; font-size: 30px" width="100%" height="50px"> Hola *|FNAME|*</td>
+            <td heigth=105px width="100%"  width="100%" height="50px"
+            style="font-family:'Courgette', cursive, sans-serif; font-style: oblique; color: #FFFFFF; text-align: center; font-size: 30px"> 
+                Hola y bienvenido <br> *|FNAME|*
+            </td>
         </tr>
 <!--Fin Saludo-->
 <!--Destacado-->
 <!--1 columna-->
-        <tr>
-           <td align="center" style="padding-top: 30px; padding-bottom: 30px; padding-left: 0px; padding-right: 0;">
-                <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="padding-top: 0px; padding-bottom: 0px; width: 100%; max-width: 600px;">
-                    <tr style="padding-top: 0px;">
-                        <td>
-                            <a href="https://www.fortfs.com/es/conditions/bonuses/welcome" target="_blank" border="0" style="text-decoration: none">
-                                <img style=" border: 0; width: 100%; height: auto; display: block" src="Imagenes/1x/OSotoroMundo.png" alt="Informacion apertura bono fortfs">
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+<tr>
+    <td heigth=105px width="100%""
+    style="font-family:'Courgette', cursive, sans-serif; font-style: oblique; color: #FFFFFF; text-align: center; font-size: 24px"> 
+        <p>¡Lo prometido es deuda! <br> por eso te enviamos el video de la clase completa <br> míralo aquí</p>
+        <svg id="more-arrows">
+            <polygon class="arrow-top sombra" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 " />
+            <polygon class="arrow-middle sombra" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 " />
+            <polygon class="arrow-bottom sombra" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 " />
+        </svg>
+    </td>
+</tr>
 <!--Fin 1 columna-->
-<!--2 columna-->
-        <tr>
-            <td class="dos-columnas" align="center" style="padding-top: 30px; padding-bottom: 30px; padding-left: 0px; padding-right: 0; text-align: center; font-size: 0px;" >
-               <!--columna izquierda-->
-                <table class="columna" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; max-width: 300px; display: inline-block" align="center" valign="top">
-                    <tr>
-                        <td class="columna"  align="center" style="text-align: center; padding-top: 8px; padding-bottom: 8px; padding-left: 8px;">
-                            <table>
-                               <tr>
-                                   <td>
-                                      <a href="https://youtu.be/H-GRpXDfCFE" target="_blank">
-                                       <img style=" border: 0; width: 100%; height: auto; display: block; max-width: 288px" src="Imagenes/1x/ComoCrearCuenta.png" alt="Google Analityc">
-                                       </a>
-                                   </td>
-                               </tr>
-                               <tr>
-                                   <td style="font-family:'Courgette', cursive;sans-serif; font-style: oblique; color: #FFFFFF; text-align: center; font-size: 15px">¿Cómo crear una cuenta?</td>
-                               </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                <!--fin columna izquierda-->
-                 <!--columna Derecha-->
-               <table class="columna" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; max-width: 300px; display: inline-block" align="center" valign="top">
-                    <tr>
-                        <td class="columna"  align="center" style="font-family:sans-serif; font-style: oblique; color: #FFFFFF;font-size: 12px; text-align: center; padding-top: 8px; padding-bottom: 8px; padding-left: 8px;">
-                            <table>
-                               <tr>
-                                   <td>
-                                   <a href="https://youtu.be/HqxmN__o3YI" target="_blank">
-                                    <img style=" border: 0; width: 100%; height: auto; display: block; max-width: 288px" src="Imagenes/1x/ComosolicitarBono.png" alt="Marketing">
-                                    </a>
-                                   </td>
-                               </tr>
-                               <tr>
-                                   <td style="font-family:'Courgette', cursive;sans-serif; font-style: oblique; color: #FFFFFF; text-align: center; font-size: 15px">
-                                       ¿Cómo solicitar el bono?
-                                    </td>
-                               </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-<!-- fin 2 columna-->
+<tr>
+    <td align="center" style="align-content: center">
+       <a href="https://youtu.be/Z_PAvXFAeiM" target="_blank">
+        <img style=" border: 0; width: 90%; height: auto; display: block;" src="Imagenes/1x/ClasePublica.png" alt="Google Analityc">
+        </a>
+    </td>
+</tr>
 <!--Fin Destacado-->
 <!--Fin Contenido Destacado-->
 <!--Fin Contenido-->
